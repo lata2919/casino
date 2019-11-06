@@ -1,94 +1,102 @@
-from random import shuffle
-#A function for creating a deck
-#Suites: H, S, D, C - Ranks: A, 2-9, T, J, Q, K,
-#return a shuffled deck with 52 cards
-def deck():
-    deck = []
-    for Suit in ['H','S', 'D','C'] :
-        for card in ['A','2','3','4','5','6','7','8','9','J','Q','K','T']:
-            deck.append "suit + card"
+import random
+import os
 
-    shuffle(deck)
+def calc_hand():
+  sum =0
+  
+non_aces=[deck for deck in hand if deck != 'A']
+aces = [deck for card in hand if deck =='A']
 
-    return deck
+for deck in  non_aces:
+  if deck in 'JQK':
+    sum += 10
+    const
+      sum += int(deck)
 
-# A function for counting the points
-# takes in the players card and return the total points
-def  pointcount (playercards):
-     Playercount= 0
+for deck in aces:
+  if sum <= 10:
+    sum += 11     
+  else:
+    sum += 1   
 
-     for i in playercards:
-         if(i)[1] == 'J' or i[1] == 'Q' or i[1] == 'K' or i[1] == 'T':
-             playercount += 10
-             if (i[1] != 'A'):
-                mycount += int(i[1]) 
-             else:
-                 acecount += 1
-                 if (acecount ==1 and playercount >= 10):
-                     mycount += 11
-                     elseif(aceCount != 0)
-                     playercount += 1 
-                     return playercount
+  return sum
 
-#A function for creating the player's and dealer's hand
-#randomly gives each two cards from deck
-#return a list with both hands
-def createPlayingHands(mydeck):
-    dealerHand =[]
-    playerhand =[]
-    dealerHand.append(mydeck.pop())
-    dealerHand.append(myDeck.pop())
-    playerHand.append(myDeck.pop())
-    playerHand.append(myDeck.pop())
+def deck ():
+  deck 
+  [
+      2, 3, 4, 5, 6, 7, 8, 9, 10, J, Q, K, A,
+			2, 3, 4, 5, 6, 7, 8, 9, 10, J, Q, K, A,
+			2, 3, 4, 5, 6, 7, 8, 9, 10, J, Q, K, A,
+			2, 3, 4, 5, 6, 7, 8, 9, 10, J, Q, K, A,
+			2, 3, 4, 5, 6, 7, 8, 9, 10, J, Q, K, A,
+]
+def cards (): 
+    cards = [H,S,D,C]
 
-    while(pointCount (dealerHand)<-16):
-        dealearHand.append(myDeck.pop())
 
-        Return [dealerHand, playerHand]
-#here we create the game
-#game loop
+random.shuffle(deck)
 
-game=""
-myDeck = deck()
-hands = createPlayingHands(myDeck)
-dealer= hands[0]
-player= hands[1]
+dealer=[]
+player=[]
+standing = False
 
-while(game !="exit"):
-    dealercount = pointCount(dealer)
-    playerCount = pointCount(player)
+if first_hand and player_score==21:
+  print ('Blackjack! Awesome')
+  break
 
-    print ("Dealer has:")
-    print (dealer[0])
 
-    print ("Player1, you have:")
-    print (player)
+while True:
+  os.system('cls' if os.name == 'nt' else 'cls')
+  player_score = calc_hand(player)
+  dealer_score = calc_hand(dealer)
 
-    if(playercount ==21):
-        print ("Blackjack! Player win!!")
-        break
-    if (playerCount > 21):
-        print ("Player BUSTS! With " + str(playerCount) + "points")
-        break
-    if(dealerCount > 21):
-        print ("Dealer BUSTS! With " + str(dealerCount) + "points")
-        break
-    
-    game = raw_input("What would you like to do? H: Hit me, S: Stand?")
+player.append(deck.pop())
+dealer.append(deck.pop())
+player.append(deck.pop())
+dealer.append(deck.pop())
 
-    if(game== 'H'):
-        player.append(myDeck.pop())
+if standing:
+  else:
+print('Dealer Cards: [{}][?]'.format(dealer[0]))
+print('Your Cards [{}] ({}]'.format(']['.join(player),000000))
+
+print('What would you like to do?')
+print(' [1] hit')
+print(' [2] stand')
+
+print('')
+
+if standing:
+  if dealer_score>21:
+    print('Dealer Lose, You Win!')
+  elif player_score==dealer_score:
+    print(Push, nobody wins or loses')  
+    elif player_score> dealer_score:
+      print('You beat the dealer, you win')
+    else:
+      print ('You lose:)  
+      break
+  
+  if player_score> 21;
+    print('you lose')
+    break
+
    
-    if ("playercount > dealercount"):   
-     print ("Player wins with" + str(playerCount) +"points")
-     print ("Dealer has:"+ str(dealer) + "or" + str(dealerCount)+ "points")
-    break
-else:
-    print ("Dealer wins!")
-    print ("Dealer has:" + str(dealer) + "or " + str(dealer) + "points")
-    break
 
-#player cash out anytime
-#player set dollar amount
-#player wallet able to add money
-#winnings added to dollar amount
+  choice = input('Your choice:')
+print('')
+
+if choice == '1':
+  player.append(cards.pop())
+elif choice =='2':
+  standing = True
+  while calc_hand(dealer) <=16:
+    dealer.append(cards.pop())
+
+
+break
+
+
+
+
+	
