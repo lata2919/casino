@@ -44,6 +44,8 @@ if first_hand and player_score==21:
   print ('Blackjack! Awesome')
   break
 
+first_hand = False
+
 
 while True:
   os.system('cls' if os.name == 'nt' else 'cls')
@@ -69,8 +71,11 @@ print('')
 if standing:
   if dealer_score>21:
     print('Dealer Lose, You Win!')
+  
   elif player_score==dealer_score:
     print(Push, nobody wins or loses')  
+    
+    
     elif player_score> dealer_score:
       print('You beat the dealer, you win')
     else:
