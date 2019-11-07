@@ -1,5 +1,4 @@
 import random
-import os
 
 def calc_hand():
   sum =0
@@ -10,8 +9,8 @@ aces = [deck for card in hand if deck =='A']
 for deck in  non_aces:
   if deck in 'JQK':
     sum += 10
-    const
-      sum += int(deck)
+    const 
+    sum += int('deck')
 
 for deck in aces:
   if sum <= 10:
@@ -48,7 +47,6 @@ first_hand = False
 
 
 while True:
-  os.system('cls' if os.name == 'nt' else 'cls')
   player_score = calc_hand(player)
   dealer_score = calc_hand(dealer)
 
@@ -57,15 +55,15 @@ dealer.append(deck.pop())
 player.append(deck.pop())
 dealer.append(deck.pop())
 
-if standing:
-  else:
-print('Dealer Cards: [{}][?]'.format(dealer[0]))
-print('Your Cards [{}] ({}]'.format(']['.join(player),000000))
+Print('Dealer Cards:(dealer[0]')
+Print('Player Cards:(Player[0]')
 
 print('What would you like to do?')
 print(' [1] hit')
 print(' [2] stand')
 
+print('')
+choice=input('Your choice: ')
 print('')
 
 if standing:
@@ -73,23 +71,58 @@ if standing:
     print('Dealer Lose, You Win!')
   
   elif player_score==dealer_score:
-    print(Push, nobody wins or loses')  
+    print('Push, wins, loses')  
     
     
-    elif player_score> dealer_score:
+    if player_score> dealer_score:
       print('You beat the dealer, you win')
     else:
-      print ('You lose:)  
+      print ('You lose')  
       break
   
-  if player_score> 21;
+  if player_score> 21:
     print('you lose')
     break
 
+
+bank= int(input("How much money do you have:"))
+Winnings = 0
+
+done="y"
+
+While game_over == 'y':
+  bet=int(input("Bet amount: "))
+  if bet > bank:
+     print(" Bet amount is more than you have, Try again")
+     continue
+
+  else:
+      choice=int(input("heads or tails?: "))   
+      result=random.radint(0,2)
+      if choice == result:
+        bank += bet
+        winning += bet
+        print("You Win")
+
+
+done= "yes"
+
+  else: 
+    bank -= bet
+    winnings += bet 
+    print("You Lose")    
+
+    print("Bank:",bank) 
+    print("You Win")
+
+    done= input( "Play Again? ( y or n): ") 
+
+print("You've made", "winnings", "dollars")
+print("You have this much in you bank:", bank)     
    
 
   choice = input('Your choice:')
-print('')
+   print('')
 
 if choice == '1':
   player.append(cards.pop())
